@@ -1,0 +1,1 @@
+echo y|powershell clear-recyclebin
