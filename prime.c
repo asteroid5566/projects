@@ -3,7 +3,7 @@
 int main(void)
 {
 	int a,b,i,kind;
-	printf("\n  找出小於n的所有質數\n\n  n:  ");
+	printf("\n  show all prime number between 1 and n\n\n  n:  ");
 	scanf("%d",&a);
 	
 	printf("\n  2\n");
