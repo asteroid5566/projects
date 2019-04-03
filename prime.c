@@ -3,7 +3,7 @@
 int main(void)
 {
 	int a,b,i,kind;
-	printf("\n找出1~n的所有質數\nn:\n");
+	printf("\n  找出小於n的所有質數\n\n  n:  ");
 	scanf("%d",&a);
 	
 	printf("\n  2\n");
