@@ -13,9 +13,11 @@ int main(){
         cin>>a;
         if(a<2)
         {
-            cout<<"\n 最小的質數為2，請輸入大於2的值\n\n\n\n\n"<<endl;
+            cin.sync();     //避免輸入的型別不同造成影響 
+            cout<<"\n 最小的質數為2，請輸入大於2的值\n\n\n\n\n\n\n"<<endl;
             continue;
         }
+        
         cout<<"\n 2"<<endl;
         
         for(b=3;b<=a;b++)
@@ -35,6 +37,7 @@ int main(){
         cout<<"\n\n 小於等於 "<<a<<" 的質數總共有 "<<count<<" 個\n\n\n"<<endl; 
         
         do{
+        cin.sync();         //避免之前輸入的數字或符號影響 
         cout<<" 再次查詢? y/n ";
         cin>>repeat;
         }while(repeat!='y'&&repeat!='Y'&&repeat!='n'&&repeat!='N');
