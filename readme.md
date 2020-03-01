@@ -4,10 +4,6 @@
 
 compiler :  C語言的小型編譯器tcc
 
-1+1.c :  C語言寫的1+1=2程式
-
-1+1.s :  從C編譯成組合語言的1+1=2程式
-
 ball :  一個閃躲球的小遊戲
 
 calculator.py :  用python寫的簡單計算機

@@ -1,13 +1,10 @@
-/*  3/30 : Add font size enlarge function
-    4/2 : Back to original font size in the end(for command line user) */
-
 #include<stdio.h>
 #include<windows.h>
 #include<conio.h>
 #include<time.h>
 
-//enlarge font size
-int GetFontSize(HANDLE windowHandle, COORD *size)
+
+int GetFontSize(HANDLE windowHandle, COORD *size)           //enlarge font size
     {
     CONSOLE_FONT_INFOEX font = { sizeof(CONSOLE_FONT_INFOEX) };
     if (!GetCurrentConsoleFontEx(windowHandle, 0, &font))
@@ -43,15 +40,16 @@ void gotoxy(int x,int y)			//cursor moving function for screen refresh
 
 int main(void)
 {
-	//enlarge font size
-    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);    //enlarge font size
     COORD size;
     if (GetFontSize(h, &size))
         {
-        size.X += (SHORT)(size.X * .5);//Grow by 50%
+        size.X += (SHORT)(size.X * .5);
         size.Y += (SHORT)(size.Y * .5);
         SetFontSize(h, size);
         }
+        
+        
     system("cls");
     printf("\e[?25l");      //hide cursor
     printf("\n\n\n\n      Do not hit the ball !");
@@ -160,7 +158,7 @@ int main(void)
 				if(map[x-1][y]=='O')
 				{
 					map[x][y]=' ';
-					gotoxy(0,0);	//refresh the screen
+					gotoxy(0,0);	//screen refresh
 					printf("\n\n    use w, s to control\n\n");
 					for(i=0;i<=4;i++)
 						puts(map[i]);
@@ -170,7 +168,7 @@ int main(void)
 				map[x][y]=' ';
 				x--;
 				map[x][y]='@';
-				gotoxy(0,0);		//refresh the screen
+				gotoxy(0,0);		//screen refresh 
 				printf("\n\n    use w, s to control\n\n");
 				for(i=0;i<=4;i++)
 					puts(map[i]);
@@ -184,7 +182,7 @@ int main(void)
 				if(map[x+1][y]=='O')
 				{
 					map[x][y]=' ';
-					gotoxy(0,0);	//refresh the screen
+					gotoxy(0,0);	//screen refresh
 					printf("\n\n    use w, s to control\n\n");
 					for(i=0;i<=4;i++)
 						puts(map[i]);
@@ -194,7 +192,7 @@ int main(void)
 				map[x][y]=' ';
 				x++;
 				map[x][y]='@';
-				gotoxy(0,0);		//refresh the screen
+				gotoxy(0,0);		//screen refresh 
 				printf("\n\n    use w, s to control\n\n");
 				for(i=0;i<=4;i++)
 					puts(map[i]);
