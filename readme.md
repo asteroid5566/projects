@@ -8,6 +8,8 @@ ball :  一個閃躲球的小遊戲
 
 calculator.py :  用python寫的簡單計算機
 
+conway's_game_of_life :  最有名的細胞自動機--生命遊戲
+
 equation :  解一元二次方程式的C程式
 
 error1、error2 :  點擊error1後會跳出一堆錯誤視窗
